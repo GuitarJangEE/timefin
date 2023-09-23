@@ -1,4 +1,4 @@
-document.title = "시계디이";
+const 타이틀바꿈 = (document.title = "시계디이");
 const 일번시계 = document.querySelector(".time");
 const 이번시계 = document.getElementById("time");
 
@@ -44,13 +44,14 @@ const 이번시계버튼 = {
 };
 const 진짜시계 = () => {
   const 실시간 = new Date();
-  const 년 = 실시간.getFullYear();
-  const 월 = 실시간.getMonth();
-  const 일 = 실시간.getDate();
-  const 시 = 실시간.getHours();
-  const 분 = 실시간.getMinutes();
-  const 초 = 실시간.getSeconds();
-  const 년월일 = `${년}년${월 + 1}월${일}일`;
+  const 년 = 실시간.getFullYear().toString();
+  const 월틀림 = 실시간.getMonth();
+  const 월 = [월틀림 + 1].toString().padStart(2, "0");
+  const 일 = 실시간.getDate().toString().padStart(2, "0");
+  const 시 = 실시간.getHours().toString().padStart(2, "0");
+  const 분 = 실시간.getMinutes().toString().padStart(2, "0");
+  const 초 = 실시간.getSeconds().toString().padStart(2, "0");
+  const 년월일 = `${년}년${월}월${일}일`;
   const 시분초 = `${시}시${분}분${초}초`;
   const 위쪽 = document.querySelector(".time");
   const 아래쪽 = document.querySelector("#time");
