@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .center {
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center">
+      <h1 class="time">시계디이</h1>
+    </div>
+    <div class="center">
+      <h1 id="time">나두시계디이</h1>
+    </div>
+    <div class="center">
+      <button onclick="일번시계버튼.색바꿈()">1번시계 색바꿈</button>
+      <button onclick="일번시계버튼.배경색()">1번시계 배경색</button>
+    </div>
+    <div class="center">
+      <button onclick="이번시계버튼.색바꿈()">2번시계 색바꿈</button>
+      <button onclick="이번시계버튼.배경색()">2번시계 배경색</button>
+    </div>
+    <div class="center"><button onclick="초기화()">초기화</button></div>
+
+    <script src="돔조작2.js"></script>
+  </body>
+</html>
