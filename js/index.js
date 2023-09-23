@@ -48,10 +48,12 @@ const 진짜시계 = () => {
   const 월틀림 = 실시간.getMonth();
   const 월 = [월틀림 + 1].toString().padStart(2, "0");
   const 일 = 실시간.getDate().toString().padStart(2, "0");
+  const 요일숫자 = 실시간.getDay();
   const 시 = 실시간.getHours().toString().padStart(2, "0");
   const 분 = 실시간.getMinutes().toString().padStart(2, "0");
   const 초 = 실시간.getSeconds().toString().padStart(2, "0");
-  const 년월일 = `${년}년${월}월${일}일`;
+  const 요일 = ["일", "월", "화", "수", "목", "금", "토"];
+  const 년월일 = `${년}년${월}월${일}일${요일[요일숫자]}요일`;
   const 시분초 = `${시}시${분}분${초}초`;
   const 위쪽 = document.querySelector(".time");
   const 아래쪽 = document.querySelector("#time");
